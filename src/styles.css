@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --color-navy: #101114;
-  --color-navy-soft: #2a2e36;
-  --color-ink: #12141a;
-  --color-muted: #5c6370;
-  --color-line: #e4e7ee;
-  --color-paper: #f3f5f8;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #1c1915;
+  --color-navy-soft: #3a342c;
+  --color-ink: #1c1915;
+  --color-muted: #6b645c;
+  --color-line: #e6dfd4;
+  --color-paper: #f7f4ee;
   --color-card: #ffffff;
-  --color-action: #0e7c73;
-  --color-wash: #e5f4f2;
-  --radius-sm: 0.5rem;
+  --color-action: #e09a12;
+  --color-wash: #efeae2;
+  --radius-sm: 0.375rem;
   --radius-md: 0.75rem;
-  --radius-lg: 1rem;
+  --radius-lg: 1.25rem;
 }
 
 @layer base {
@@ -40,7 +40,7 @@
   h3 {
     font-family: var(--font-sans);
     font-weight: 600;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     text-wrap: balance;
   }
 

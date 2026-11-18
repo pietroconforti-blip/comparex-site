@@ -3,14 +3,14 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/cn";
 
 export const buttonVariants = cva(
-  "inline-flex h-11 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50",
+  "inline-flex h-11 items-center justify-center gap-2 rounded-md px-4 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {
-        primary: "bg-action text-card hover:bg-navy",
-        secondary: "border border-line bg-card text-ink hover:bg-paper",
+        primary: "bg-action text-ink hover:bg-navy-soft hover:text-paper",
+        secondary: "border border-line bg-card text-ink hover:bg-wash",
         ghost: "bg-transparent text-ink hover:bg-wash",
-        navy: "bg-navy text-card hover:bg-navy-soft",
+        navy: "bg-navy text-paper hover:bg-navy-soft",
       },
     },
     defaultVariants: { variant: "primary" },
@@ -24,4 +24,4 @@ export function Button({ className, variant, type = "button", ...props }: Props)
 }
 
 export const fieldClass =
-  "h-11 w-full rounded-lg border border-line bg-card px-3 text-sm text-ink";
+  "h-11 w-full rounded-md border border-line bg-wash px-3 text-sm text-ink";
