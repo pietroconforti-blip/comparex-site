@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --color-navy: #0c1c33;
-  --color-navy-soft: #163056;
-  --color-ink: #122033;
-  --color-muted: #5c6b7c;
-  --color-line: #e3e7ee;
-  --color-paper: #f4f6f8;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #101114;
+  --color-navy-soft: #2a2e36;
+  --color-ink: #12141a;
+  --color-muted: #5c6370;
+  --color-line: #e4e7ee;
+  --color-paper: #f3f5f8;
   --color-card: #ffffff;
-  --color-action: #1f5fbf;
-  --color-wash: #e7eef8;
+  --color-action: #0e7c73;
+  --color-wash: #e5f4f2;
   --radius-sm: 0.5rem;
-  --radius-md: 0.875rem;
-  --radius-lg: 1.25rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
 }
 
 @layer base {
@@ -37,11 +38,19 @@
   h1,
   h2,
   h3 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.03em;
     text-wrap: balance;
   }
 
   p {
     text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-wash);
+    color: var(--color-ink);
   }
 
   :focus-visible {

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/privacy")({
 function PrivacyPage() {
   return (
     <Container className="py-10">
-      <h1 className="text-4xl font-semibold tracking-tight">Privacy</h1>
+      <h1 className="text-5xl">Privacy</h1>
       <div className="mt-6 max-w-2xl space-y-4 text-sm">
         <p>
           CompareX in this preview stores an account only so you can keep a profile, saved packages, favorites, handoff notes and messages you write yourself. Each of those rows is read and written for the signed-in user only.

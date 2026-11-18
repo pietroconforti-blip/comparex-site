@@ -23,7 +23,7 @@ function LoginPage() {
   return (
     <Container className="py-16">
       <div className="mx-auto max-w-md">
-        <h1 className="text-4xl font-semibold tracking-tight">Your CompareX account</h1>
+        <h1 className="text-5xl">Your CompareX account</h1>
         <p className="mt-3 text-muted">
           One account for saved packages, favorites and the status of provider handoffs. Signing in does not create a contract with any provider.
         </p>

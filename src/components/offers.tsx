@@ -13,13 +13,13 @@ import { buttonVariants } from "@/components/ui/button";
 export function BasisBadge({ offer }: { offer: Offer }) {
   if (!offer.basis || offer.monthlyEur == null) {
     return (
-      <span className="rounded-full bg-paper px-2 py-1 text-xs font-medium text-muted">
+      <span className="inline-block rounded-md bg-paper px-2 py-1 text-xs font-medium text-muted">
         Price on provider
       </span>
     );
   }
   return (
-    <span className="rounded-full bg-wash px-2 py-1 text-xs font-medium text-action">
+    <span className="inline-block rounded-md bg-wash px-2 py-1 text-xs font-medium text-action">
       {offer.basis === "published" ? "Published figure" : "Reported figure"}
       {offer.asOf ? ` · ${offer.asOf}` : ""}
     </span>

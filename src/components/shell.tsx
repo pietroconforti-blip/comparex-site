@@ -22,7 +22,7 @@ export function Container({ children, className }: { children: ReactNode; classN
 
 function AuthLink() {
   const { user, isPending } = useCurrentUserState();
-  if (isPending) return <span className="inline-block h-11 w-24 animate-pulse rounded-full bg-paper" />;
+  if (isPending) return <span className="inline-block h-11 w-24 animate-pulse rounded-lg bg-wash" />;
   if (!user) {
     return (
       <Link to="/login" search={{ from: "/dashboard" }} className={buttonVariants({ variant: "navy" })}>
@@ -43,7 +43,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col">
       <a
         href="#content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-card focus:px-4 focus:py-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-card focus:px-4 focus:py-2"
       >
         Skip to content
       </a>
@@ -67,10 +67,9 @@ function Header() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-card">
+    <header className="sticky top-0 z-40 border-b border-line bg-card/95 backdrop-blur">
       <Container className="flex h-16 items-center gap-3">
-        <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight text-navy">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-navy text-xs text-paper">Cx</span>
+        <Link to="/" className="text-lg font-semibold tracking-tight text-ink">
           CompareX
         </Link>
         <nav className="ml-4 hidden items-center gap-4 xl:flex" aria-label="Primary">
@@ -79,8 +78,8 @@ function Header() {
               key={item.to}
               to={item.to}
               className={cn(
-                "text-sm",
-                pathname === item.to ? "font-semibold text-ink" : "text-muted hover:text-ink",
+                "text-sm font-medium",
+                pathname === item.to ? "text-ink" : "text-muted hover:text-ink",
               )}
             >
               {item.label}
@@ -88,7 +87,7 @@ function Header() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
-          <Link to="/search" className="hidden text-sm text-muted hover:text-ink sm:inline">
+          <Link to="/search" className="hidden text-sm font-medium text-muted hover:text-ink sm:inline">
             Search
           </Link>
           <label className="sr-only" htmlFor="header-city">
@@ -98,7 +97,7 @@ function Header() {
             id="header-city"
             value={city}
             onChange={(event) => setCity(event.target.value as CityId)}
-            className="h-11 rounded-full border border-line bg-card px-3 text-sm"
+            className="h-11 rounded-lg border border-line bg-card px-3 text-sm"
           >
             {cities.map((item) => (
               <option key={item.id} value={item.id}>
@@ -111,7 +110,7 @@ function Header() {
           </div>
           <button
             type="button"
-            className="grid h-11 w-11 place-items-center rounded-full border border-line xl:hidden"
+            className="grid h-11 w-11 place-items-center rounded-lg border border-line xl:hidden"
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((value) => !value)}
@@ -121,7 +120,7 @@ function Header() {
         </div>
       </Container>
       {open ? (
-        <div className="border-t border-line xl:hidden">
+        <div className="border-t border-line bg-card xl:hidden">
           <Container className="flex flex-col gap-1 py-3">
             <Link to="/search" className="flex h-11 items-center text-sm">
               Search
@@ -143,32 +142,32 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="mt-16 bg-navy text-paper">
+    <footer className="mt-16 bg-navy text-card">
       <Container className="grid gap-8 py-12 sm:grid-cols-3">
         <div>
-          <p className="font-semibold">CompareX</p>
-          <p className="mt-2 text-sm text-paper/80">
+          <p className="text-lg font-semibold tracking-tight">CompareX</p>
+          <p className="mt-2 text-sm text-card/70">
             Everything students need. One platform. Smarter decisions. Vienna first, Milan next.
           </p>
         </div>
         <div className="text-sm">
-          <p className="font-medium">Explore</p>
-          <ul className="mt-2 space-y-2 text-paper/80">
-            <li><Link to="/package-builder" className="hover:text-paper">Package builder</Link></li>
-            <li><Link to="/search" className="hover:text-paper">Search</Link></li>
-            <li><Link to="/dashboard" className="hover:text-paper">Dashboard</Link></li>
+          <p className="font-semibold">Explore</p>
+          <ul className="mt-3 space-y-2 text-card/70">
+            <li><Link to="/package-builder" className="hover:text-card">Package builder</Link></li>
+            <li><Link to="/search" className="hover:text-card">Search</Link></li>
+            <li><Link to="/dashboard" className="hover:text-card">Dashboard</Link></li>
           </ul>
         </div>
         <div className="text-sm">
-          <p className="font-medium">About this preview</p>
-          <ul className="mt-2 space-y-2 text-paper/80">
-            <li><Link to="/privacy" className="hover:text-paper">Privacy</Link></li>
-            <li><Link to="/contact" className="hover:text-paper">Contact</Link></li>
-            <li><Link to="/account" className="hover:text-paper">Account settings</Link></li>
+          <p className="font-semibold">About this preview</p>
+          <ul className="mt-3 space-y-2 text-card/70">
+            <li><Link to="/privacy" className="hover:text-card">Privacy</Link></li>
+            <li><Link to="/contact" className="hover:text-card">Contact</Link></li>
+            <li><Link to="/account" className="hover:text-card">Account settings</Link></li>
           </ul>
         </div>
       </Container>
-      <Container className="border-t border-paper/15 py-5 text-sm text-paper/75">
+      <Container className="border-t border-card/15 py-5 text-sm text-card/60">
         CompareX compares and refers. It does not sell housing, mobile, transport, gyms or streaming, and it has no commercial partnership with the providers linked here. A contract exists only if you complete it on the provider’s own site.
       </Container>
     </footer>

@@ -29,7 +29,7 @@ function CheckoutPage() {
   return (
     <Container className="py-10">
       <p className="text-sm text-muted">Review</p>
-      <h1 className="mt-2 text-4xl font-semibold tracking-tight">Continue with each provider.</h1>
+      <h1 className="mt-2 text-5xl">Continue with each provider.</h1>
       <p className="mt-3 max-w-2xl text-muted">
         {getCity(city).name}. CompareX does not check you out, take a card, or tell a provider you have signed. Each button leaves this site.
       </p>

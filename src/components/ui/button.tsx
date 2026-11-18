@@ -3,14 +3,14 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/cn";
 
 export const buttonVariants = cva(
-  "inline-flex h-11 items-center justify-center gap-2 rounded-full px-4 text-sm font-medium transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50",
+  "inline-flex h-11 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {
-        primary: "bg-action text-paper hover:bg-navy",
+        primary: "bg-action text-card hover:bg-navy",
         secondary: "border border-line bg-card text-ink hover:bg-paper",
-        ghost: "bg-transparent text-ink hover:bg-card",
-        navy: "bg-navy text-paper hover:bg-navy-soft",
+        ghost: "bg-transparent text-ink hover:bg-wash",
+        navy: "bg-navy text-card hover:bg-navy-soft",
       },
     },
     defaultVariants: { variant: "primary" },

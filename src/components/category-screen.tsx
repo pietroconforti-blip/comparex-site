@@ -32,10 +32,10 @@ export function CategoryScreen({ category }: { category: CategoryId }) {
 
   return (
     <Container className="py-10">
-      <p className="text-sm text-muted">
+      <p className="text-sm font-medium text-action">
         {place.name}, {place.country}
       </p>
-      <h1 className="mt-2 text-4xl font-semibold tracking-tight">{meta.label}</h1>
+      <h1 className="mt-2 text-4xl">{meta.label}</h1>
       <p className="mt-3 max-w-2xl text-muted">{meta.blurb}. Change city in the header to switch between Vienna and Milan.</p>
       <div className="mt-4 max-w-3xl">
         <ReferenceLegend />

@@ -86,7 +86,7 @@ function AccountPage() {
     <Container className="py-10">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h1 className="text-4xl font-semibold tracking-tight">Account</h1>
+          <h1 className="text-5xl">Account</h1>
           <p className="mt-2 text-sm text-muted">{user.primaryEmail}</p>
         </div>
         <UserButton />

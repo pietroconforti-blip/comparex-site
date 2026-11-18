@@ -43,7 +43,7 @@ function SearchPage() {
 
   return (
     <Container className="py-10">
-      <h1 className="text-4xl font-semibold tracking-tight">Search</h1>
+      <h1 className="text-5xl">Search</h1>
       <p className="mt-3 max-w-2xl text-muted">
         Try a city, a service and a limit. “Mobile plan with 100 GB” keeps plans whose cited data is at least 100 GB.
       </p>

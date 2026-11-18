@@ -34,13 +34,13 @@ function Home() {
 
   return (
     <div>
-      <section className="bg-navy text-paper">
-        <Container className="py-16 sm:py-24">
-          <p className="text-sm font-medium text-paper/80">Vienna and Milan</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
+      <section className="border-b border-line bg-card">
+        <Container className="py-14 sm:py-20">
+          <p className="text-sm font-semibold text-action">Vienna and Milan</p>
+          <h1 className="mt-3 max-w-3xl text-4xl leading-tight sm:text-6xl">
             Everything students need. One platform.
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-paper/80">
+          <p className="mt-5 max-w-xl text-lg text-muted">
             Search housing, mobile, transport, gyms and streaming. Build one monthly package. Continue on the provider’s own site.
           </p>
           <form onSubmit={submit} className="mt-8 flex max-w-2xl flex-col gap-3 sm:flex-row" role="search">
@@ -52,7 +52,7 @@ function Home() {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Student room in Vienna under €450"
-              className="h-14 flex-1 rounded-full border border-paper/20 bg-card px-5 text-base text-ink"
+              className="h-14 flex-1 rounded-lg border border-line bg-paper px-4 text-base text-ink"
             />
             <button type="submit" className={buttonVariants({ variant: "primary", className: "h-14 px-6" })}>
               Search
@@ -64,7 +64,7 @@ function Home() {
                 key={item}
                 to="/search"
                 search={{ q: item }}
-                className="rounded-full border border-paper/25 px-3 py-2 text-sm text-paper/90 hover:bg-paper/10"
+                className="rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink hover:border-action"
               >
                 {item}
               </Link>
@@ -74,7 +74,7 @@ function Home() {
       </section>
 
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold tracking-tight">Five services, one account</h2>
+        <h2 className="text-2xl">Five services, one account</h2>
         <dl className="mt-6 divide-y divide-line border-y border-line">
           {categories.map((category) => (
             <div key={category.id} className="grid gap-1 py-4 sm:grid-cols-[10rem_1fr_auto] sm:items-center">
@@ -93,7 +93,7 @@ function Home() {
       <section className="border-y border-line bg-card">
         <Container className="grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight">Figures we can actually cite</h2>
+            <h2 className="text-2xl">Figures we can actually cite</h2>
             <p className="mt-3 text-muted">
               These are not a basket you can buy from CompareX. They are public or reported numbers you can drop into a package, then check on the provider before you pay.
             </p>
@@ -118,7 +118,7 @@ function Home() {
             </ul>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight">How a month gets organised</h2>
+            <h2 className="text-2xl">How a month gets organised</h2>
             <ol className="mt-6 space-y-5">
               <li>
                 <p className="font-semibold">1. Search the city</p>
@@ -145,7 +145,7 @@ function Home() {
       </section>
 
       <Container className="py-14">
-        <h2 className="text-2xl font-semibold tracking-tight">Two cities, one site</h2>
+        <h2 className="text-2xl">Two cities, one site</h2>
         <div className="mt-6 grid gap-8 sm:grid-cols-2">
           <article>
             <h3 className="text-xl font-semibold">Vienna</h3>

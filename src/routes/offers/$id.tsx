@@ -39,7 +39,7 @@ function OfferPage() {
       <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-sm text-muted">{offer.provider}</p>
-          <h1 className="mt-1 text-4xl font-semibold tracking-tight">{offer.name}</h1>
+          <h1 className="mt-1 text-5xl">{offer.name}</h1>
         </div>
         <PriceBlock offer={offer} emphasis />
       </div>

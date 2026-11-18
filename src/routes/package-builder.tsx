@@ -59,7 +59,7 @@ function PackageBuilderPage() {
   return (
     <Container className="py-10">
       <p className="text-sm text-muted">Package builder</p>
-      <h1 className="mt-2 text-4xl font-semibold tracking-tight">One month, one total.</h1>
+      <h1 className="mt-2 text-5xl">One month, one total.</h1>
       <p className="mt-3 max-w-2xl text-muted">
         Pick a service in each category you need. Cited prices are used automatically. Everything else waits for a figure you type from the provider.
       </p>

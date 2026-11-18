@@ -58,7 +58,7 @@ function DashboardPage() {
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-sm text-muted">Dashboard</p>
-          <h1 className="mt-1 text-4xl font-semibold tracking-tight">Hello, {name}</h1>
+          <h1 className="mt-1 text-5xl">Hello, {name}</h1>
         </div>
         <UserButton />
       </div>

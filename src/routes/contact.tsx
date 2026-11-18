@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   return (
     <Container className="py-10">
-      <h1 className="text-4xl font-semibold tracking-tight">Contact</h1>
+      <h1 className="text-5xl">Contact</h1>
       <p className="mt-3 max-w-2xl text-muted">
         There is no support inbox in this preview, and notes are not delivered to a team. If you are signed in, a note is stored on your account so you can keep a question next to your package.
       </p>
